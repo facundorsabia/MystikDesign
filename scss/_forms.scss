@@ -12,7 +12,7 @@
         text-align: center;
         @media screen and (max-width: 768px) {
             text-align: left;
-            margin-left: 29%;
+            margin-left: 34%;
         }
         h2 {
             font-family: 'Nunito', sans-serif;
@@ -23,7 +23,7 @@
             color: $color_footer;
             display:inline-block;
             @media screen and (max-width: 768px) {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
     
         }
@@ -98,7 +98,10 @@
             font-weight: bold;
             line-height: 34px;
             @media screen and (max-width: 768px) {
-            margin-left: 23%;
+            margin-left: 32%;
+            height: 35px;
+            width: 120px;
+            font-size: 1.5rem;
             }
             &:hover{
                 transition: all 0.4s;
