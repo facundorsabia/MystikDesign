@@ -1,0 +1,110 @@
+.Formulario {
+    margin:0;
+    padding: 4rem 4rem;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+        padding: 4rem 1rem;
+    }
+
+    .Formulario__Titulo{
+        width: 200px;
+        height: 57px;
+        text-align: center;
+        @media screen and (max-width: 768px) {
+            text-align: left;
+            margin-left: 29%;
+        }
+        h2 {
+            font-family: 'Nunito', sans-serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 3rem;
+            line-height: 4rem;
+            color: $color_footer;
+            display:inline-block;
+            @media screen and (max-width: 768px) {
+                font-size: 2.5rem;
+            }
+    
+        }
+    }
+
+    .Formulario__Rellenar {
+        width: 100%;
+        padding: 0px 80px 30px 80px;
+        align-items:center;
+        @media screen and (max-width: 768px) {
+            padding: 0px 20px 10px 20px;
+        }
+
+        .Formulario__Datos{
+            text-align: right;
+            .Formulario__Input{
+                width: 80%;
+                height: 60px;
+                font-size: 1.3rem;
+                border-radius: 10px;
+                border:none;
+                margin: 1rem;
+                padding-left: 2rem;
+                outline: none;
+                @media screen and (max-width: 768px) {
+                    height: 45px;
+                    width: 100%;
+                }
+            }
+    
+        }
+    }
+
+    .Formulario__Mensaje{
+        text-align: left;
+        
+        .Formulario__Mensaje__Area{
+            width: 80%;
+            height: 220px;
+            border-radius: 11px;
+            border:none;
+            margin: 1rem;
+            resize: none;
+            font-size: 1.3rem;
+            padding-left: 2rem;
+            padding-top: 2rem;
+            outline: none;
+            @media screen and (max-width: 768px) {
+                height: 120px;
+                width: 100%;
+            }
+        }
+    }
+
+    .Formulario__Btn{
+        text-align: right;
+        @media (max-width: 680px) { 
+            text-align: center;
+        }
+        .Formulario__EnviarBtn{
+            width: 178px;
+            height: 49px;
+            background: $color_botones_2;
+            margin-right: 10rem;
+            border-radius: 50px;
+            border:none;
+            color: #ffffff;
+            text-align: center;
+            font-size: 2rem;
+            font-family: 'Nunito', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 34px;
+            @media screen and (max-width: 768px) {
+            margin-left: 23%;
+            }
+            &:hover{
+                transition: all 0.4s;
+                box-shadow: 0px 6px 10px rgba(38, 38, 38, 0.2);
+                transform: translateY(-3px);
+            }
+        }
+    }
+}

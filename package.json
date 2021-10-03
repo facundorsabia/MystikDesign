@@ -1,0 +1,23 @@
+{
+  "name": "mystik-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferhira/mystik-design.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ferhira/mystik-design/issues"
+  },
+  "homepage": "https://github.com/ferhira/mystik-design#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

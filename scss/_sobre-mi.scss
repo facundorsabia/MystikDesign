@@ -1,0 +1,154 @@
+.Sobre__Mi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .Sobre__Mi__1 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        .Sobre__Mi__1__Texto {
+            width: 500px;
+            margin-bottom: 100px;
+            .Sobre__Mi__1__Texto__Titulo{
+                h2 {
+                    color: #4B949C;
+                    text-align: left;
+                    margin-bottom: 20px;
+                }
+            }
+            p {
+                font-family: 'Nunito', sans-serif;
+                font-weight: 300;
+                font-size: 18px;
+                text-align: justify;
+                line-height: 25px;
+                margin-top: 1.5rem;
+            }
+        }
+        .Sobre__Mi__1__Img {
+            width: 500px;
+            img {
+                width: 100%;
+            };
+        }
+    }
+    .Sobre__Mi__2 {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        .Sobre__Mi__2__Img {
+            width: 500px;
+            img {
+                width: 100%;
+            };
+        }
+        .Sobre__Mi__2__Texto {
+            width: 500px;
+            p {
+                font-family: 'Nunito', sans-serif;
+                font-weight: 300;
+                font-size: 18px;
+                text-align: justify;
+                line-height: 25px;
+                margin-top: 1.5rem;
+            }
+            #mouse{
+                display: none;
+            }
+        }
+    }
+}
+    
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .Sobre__Mi {
+        .Sobre__Mi__1 {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .Sobre__Mi__2 {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            .Sobre__Mi__2__Img {
+                width: 100vw;
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .Sobre__Mi {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .Sobre__Mi__1 {
+            width: 100vw;
+            flex-direction: column;
+            .Sobre__Mi__1__Img {
+                width: 100vw;
+                img {
+                    width: 90%;
+                    margin-left: 5%;
+                }
+            }
+            .Sobre__Mi__1__Texto {
+                width: 100vw;
+                margin-bottom: 0;
+                .Sobre__Mi__1__Texto__Titulo{
+                    h2 {
+                        text-align: center;
+                        font-size: 2rem;
+                        margin: 0;
+                    }
+                }
+                p {
+                    font-weight: 300;
+                    font-size: 1.5em;
+                    text-align: justify;
+                    line-height: 1.6em;
+                    padding: 14px 22px;
+                    margin: 0;
+                }
+            }
+        }
+        .Sobre__Mi__2 {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            .Sobre__Mi__2__Img {
+                width: 100vw;
+                img {
+                    display: none;
+                }
+            }
+            .Sobre__Mi__2__Texto {
+                width: 100vw;
+                p {
+                    font-weight: 300;
+                    font-size: 1.5em;
+                    text-align: justify;
+                    line-height: 1.6em;
+                    padding: 14px 22px;
+                    margin: 0;
+                }
+                #mouse{
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

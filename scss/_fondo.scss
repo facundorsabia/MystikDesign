@@ -1,0 +1,18 @@
+.fondo {
+    background-image: url(../imagenes/desktop.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+    @media screen and (max-width: 767px) {
+        background-image: url(../imagenes/mobile3.webp);
+    }
+}
+
+.fondo2{
+    background-image: url(../imagenes/fondo-formulario.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media screen and (max-width: 767px) {
+        background-image: url(../imagenes/fondo-formulario-mobile.png);
+    }
+}
