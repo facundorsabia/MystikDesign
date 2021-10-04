@@ -129,3 +129,76 @@ $(".candys").click (function() {
   $("#popUpSlide1").attr("src", "imagenes/logofolio/logo10.webp");
 });
 
+//EMAILING CON FIREBASE Y JAVASCRIPT
+
+
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDbJnq6vBPw4KJRXd7C_3zZ4_7ysWxXDiU",
+    authDomain: "mystik-design.firebaseapp.com",
+    projectId: "mystik-design",
+    storageBucket: "mystik-design.appspot.com",
+    messagingSenderId: "1077136849265",
+    appId: "1:1077136849265:web:072d8ffe34bfcf8cab5ed0",
+    measurementId: "G-0CR2CQM8NL"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
+// Refernece contactInfo collections
+let contactInfo = firebase.database().ref("infos");
+
+// Listen for a submit
+document.querySelector("#contact-form").addEventListener("submit", submitForm);
+
+function submitForm(e) {
+  e.preventDefault();
+
+  //   Get input Values
+  let name = document.querySelector("#name").value;
+  let email = document.querySelector("#email").value;
+  let message = document.querySelector("#message").value;
+  console.log(name, email, message);
+
+  saveContactInfo(name, email, message);
+
+  document.querySelector("#contact-form").reset();
+
+  sendEmail(name, email, message);
+}
+
+// Save infos to Firebase
+function saveContactInfo(name, email, message) {
+  let newContactInfo = contactInfo.push();
+
+  newContactInfo.set({
+    name: name,
+    email: email,
+    message: message,
+  });
+}
+
+//Send Email Info
+
+function sendEmail (name, email, message){
+  Email.send({
+    Host: "smtp.gmail.com", 
+    Username:"facundorsabia@gmail.com", 
+    To: "facundorsabia@gmail.com",
+    From: "facundorsabia@gmail.com",
+    Subject:`${name} te ha enviado un mensaje a través de la web de Mystik`, 
+    Body:`Nombre:${name} <br> Email:${email} <br> Mensaje: ${message}`
+    })
+    .then(
+      message => alert(message)
+    );
+}
