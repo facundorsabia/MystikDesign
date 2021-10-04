@@ -1,0 +1,164 @@
+/*Nav*/
+.Nav {
+    width: 87%;
+    background-color: #FFFFFF !important;
+    box-shadow: 0px 2px 14px 0px #CACACA80;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    z-index: 10;
+    height: 6rem;
+    @media only screen and (max-width: 1200px) {
+        height: 50px;
+        border-radius: 10px;
+        width: 93%;
+    }
+    .Nav__Container {
+        .navbar-brand{
+            width: 13rem;
+            margin-left: 8rem;
+            img{
+                width: 100%;
+            }
+            @media only screen and (max-width: 1200px) {
+                width: 10rem;
+                margin-top: -1px;
+                margin-left: 2rem;
+            }
+        }
+
+        padding: 0rem;
+        text-align: center;
+
+        .Nav__Toggler {
+            border: none;
+            margin-top: -4px;
+            margin-right: 4rem;
+            &:focus {
+                outline: transparent;
+                box-shadow: none;
+            }
+            &:active {
+                outline: none;
+            }
+        }
+
+        .navbar-toggler {
+            float: right;
+            border: none;
+            padding-right: 0;
+            &:active {
+                outline: none;
+            }
+            &:focus {
+                outline: none;
+            }
+            .navbar-toggler-icon {
+                width: 24px;
+                height: 17px;
+                background-image: none;
+                position: relative;
+                border-bottom: 1px solid #000;
+                transition: all 300ms linear;
+                &:after {
+                    width: 24px;
+                    position: absolute;
+                    height: 1px;
+                    background-color: #000;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    z-index: 2;
+                    transition: all 300ms linear;
+                    top: 8px;
+                }
+                &:before {
+                    width: 24px;
+                    position: absolute;
+                    height: 1px;
+                    background-color: #000;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    z-index: 2;
+                    transition: all 300ms linear;
+                }
+            }
+        }
+        .navbar-toggler[aria-expanded="true"] {
+            .navbar-toggler-icon {
+                &:after {
+                    transform: rotate(45deg);
+                }
+                &:before {
+                    transform: translateY(8px) rotate(-45deg);
+                }
+                border-color: transparent;
+            }
+        }
+        
+
+        #navbarSupportedContent{
+            height: 6rem;
+            background: #ffffff;
+            @media only screen and (max-width: 1200px) {
+                height: auto;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+                margin-top: -4px;
+            }
+            ul {
+                list-style: none;
+                margin-left: 35%;
+                padding: 5px;
+                position: relative;
+                @media only screen and (max-width: 1200px) {
+                    margin:0;
+                    height: auto;
+                }
+                li {
+                    display: inline-block;
+                    position: relative;
+                    a {
+                        color: $color_texto !important;
+                        text-decoration: none;
+                        font-size: 1.5rem;
+                        line-height: 1.5rem;
+                        font-weight: 300;
+                        margin-right: 2.3rem;
+                        padding: 0.5em 0.5em;
+                        border-radius: 5px;
+                        transition: background-color 0.3s ease-in-out;
+                        @media only screen and (max-width: 1200px) {
+                            font-size: 1.5rem;
+                            font-weight: 300;
+                            margin: 1.5rem
+                        }
+                        &:hover {
+                            background-color: $color_principal;
+                            color: #ffffff !important;
+                        }
+                    }
+                }
+                .Nav__Li__Redes{
+                    margin-top: 2rem;
+                    margin-bottom: 1.5rem;
+                    .Nav__Redes{
+                        display:none;
+                        @media only screen and (max-width: 1200px) {
+                            display: inline;
+                            margin: 0;
+                            width: 1rem;
+                            margin-top: 2rem;
+                        }
+                        img{
+                            width: 3rem;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}
