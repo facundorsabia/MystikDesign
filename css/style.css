@@ -1077,3 +1077,12 @@ footer {
 .swiper-button-next {
   color: #6EC5CE;
   transform: scale(0.7); }
+
+.mensaje__enviado {
+  margin: 3rem;
+  color: #4B949C;
+  text-align: center;
+  font-size: 3.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 7rem; }
