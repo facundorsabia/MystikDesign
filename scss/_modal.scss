@@ -1,0 +1,46 @@
+.modal-content{
+
+    border:none;
+
+    @media screen and (max-width: 320px) {
+        width:300px;
+        left: 2%;
+    }
+
+    @media screen and (min-width: 321px) and (max-width: 375px) {
+        width:300px;
+        left: 7%;
+    }
+
+    @media screen and (min-width: 376px) and (max-width: 680px) {
+        width:300px;
+        left: 12%;
+    }
+
+    .modal-header{
+        border-bottom:none;
+    }
+    .modal-body{
+        padding: 0;
+    }
+}
+
+
+.swiper-button-prev{
+    color:$color_principal;
+    transform: scale(0.7);
+}
+.swiper-button-next{
+    color:$color_principal;
+    transform: scale(0.7);
+}
+
+.mensaje__enviado{
+    margin: 3rem;
+    color: #4B949C;
+    text-align: center;
+    font-size: 3.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 7rem;
+}
