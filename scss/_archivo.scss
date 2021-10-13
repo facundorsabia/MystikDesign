@@ -1,0 +1,47 @@
+.Archivo__Descargar {
+    height: 15vh;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background: url(../imagenes/fondo-descargas.png) no-repeat center center;
+    margin-top: 50px;
+    @media screen and (max-width: 768px) {
+        height: 15vh;
+        padding: 1.5rem;
+    }   
+    h3 {
+        color: #4B949C;
+        font-size: 3.0rem;
+        @media screen and (max-width: 768px) {
+            font-size: 2rem;
+            padding-left: 15px;
+        }  
+    }
+
+    .Archivo__Descargar__Button {
+        height: 50px;
+        width: 200px;
+        background: $color_botones;
+        border-radius: 25px;
+        border: 0;
+        color: #fff;
+        list-style: none;
+        text-decoration: none;
+        font-size: 2rem;
+
+        &:hover {
+            background: $color_botones_2;
+            transition: all 0.4s;
+            box-shadow: 0px 6px 10px rgba(38, 38, 38, 0.2);
+            transform: translateY(-3px);
+        }
+
+        @media screen and (max-width: 1200px) {
+            height: 35px;
+            width: 120px;
+            font-size: 1.5rem;
+        }   
+    }
+}
