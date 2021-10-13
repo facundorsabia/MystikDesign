@@ -177,7 +177,7 @@ p {
       .Nav .Nav__Container .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
         transform: translateY(8px) rotate(-45deg); }
     .Nav .Nav__Container #navbarSupportedContent {
-      height: 6rem;
+      height: 0rem;
       background: #ffffff; }
       @media only screen and (max-width: 1200px) {
         .Nav .Nav__Container #navbarSupportedContent {
